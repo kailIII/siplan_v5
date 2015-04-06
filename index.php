@@ -38,7 +38,7 @@ $msg = "<section class='content'>
 
 <div class='form-group'>
 <label for='ejercicio'>Ejercicio</label>
-<select class='form-control'>
+<select class='form-control' name='ejercicio'>
 <option value='2015'> 2015 </option>
 </select>
 </div>
