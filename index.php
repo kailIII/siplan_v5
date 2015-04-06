@@ -35,6 +35,14 @@ $msg = "<section class='content'>
 <label for='exampleInputPassword1'>Password</label>
 <input type='password' class='form-control' name ='clave' id='exampleInputPassword1' placeholder='Password' required>
 </div>
+
+<div class='form-group'>
+<label for='ejercicio'>Ejercicio</label>
+<select class='form-control'>
+<option value='2015'> 2015 </option>
+</select>
+</div>
+
 </div><!-- /.box-body -->
 <div class='box-footer'>
 <button type='submit' class='btn btn-success'>Ingresar</button>
