@@ -7,6 +7,7 @@ if(!$_SESSION['activo']){
     session_destroy();
     header('Location: index.php?mesaje=2');
 }
+
 require_once('conexion.php');
 //se carga el encabezado
 $ConsultaDatosUsuario = "SELECT * FROM usuarios WHERE id_usuario = ".$_SESSION['id_usuario'];
