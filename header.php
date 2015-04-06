@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>SIPUB | Gobierno del Estado de Zacatecas</title>
+    <title>Sistema de Planeación</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -10,10 +10,21 @@
     <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="css/_all-skins.min.css" rel="stylesheet" type="text/css" />
   </head>
-  <body class="skin-black">
+  <?php
+if($_SESSION['perfil'] == 1){
+  $tema = "skin-red";
+}else{
+$tema = "skin-black";
+}
+
+?>
+
+  <body class="<?php echo $tema; ?>">
+
+
     <div class="wrapper">
       <header class="main-header">
-        <a href="#" class="logo"><img src="imagenes/logo_small.png"></a>
+        <a href="#" class="logo"><h3>SIPLAN</h3></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
