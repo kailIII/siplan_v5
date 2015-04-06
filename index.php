@@ -29,11 +29,11 @@ $msg = "<section class='content'>
 <div class='box-body'>
 <div class='form-group'>
 <label for='exampleInputEmail1'>Usuario</label>
-<input type='text' class='form-control' id='usuario' placeholder='Usuario' required>
+<input type='text' class='form-control' id='usuario' name ='usuario' placeholder='Usuario' required>
 </div>
 <div class='form-group'>
 <label for='exampleInputPassword1'>Password</label>
-<input type='password' class='form-control' id='exampleInputPassword1' placeholder='Password' required>
+<input type='password' class='form-control' name ='clave' id='exampleInputPassword1' placeholder='Password' required>
 </div>
 </div><!-- /.box-body -->
 <div class='box-footer'>
