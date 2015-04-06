@@ -1,10 +1,10 @@
 <?php
-
 $host_bd = "localhost";
 $usuario_bd = "usr_consultas";
 $clave_bd =  "Wer355ydLdoodp?kudfte$%mdhjfhhs:idyyecyttTnfj";
 $bd = "siplan_pmz_2015";
 $conexion=new mysqli($host_bd,$usuario_bd,$clave_bd,$bd) or die("Error");
+
 if($conexion->connect_errno){
 $error = $conexion->connect_errno;
 $msg = "<div class='callout callout-danger'>
