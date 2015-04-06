@@ -1,4 +1,5 @@
 <?php
+
 $host_bd = "localhost";
 $usuario_bd = "usr_consultas";
 $clave_bd =  "Wer355ydLdoodp?kudfte$%mdhjfhhs:idyyecyttTnfj";
@@ -23,22 +24,25 @@ function encriptar(){
 }
 //mandamos llamar la función para encriptar
 $clave = encriptar();
+$usr = $_POST['usuario'];
 //consultamos que el usuario este en la base de datos
 $ConsultarUsuario = "SELECT count(*) FROM usuarios WHERE usuario = '$usr' AND clave = '$clave'";
 $Resultado = $conexion->query($ConsultarUsuario);
-$row = $Resultado->fetch_array();
+echo $ConsultarUsuario;
+    $row = $Resultado->fetch_array();
 //si encuentra un usuario registramos las variables de sesion y abrimos el FrontEnd
 
 if($row[0]){
+ session_start();
  require_once 'registro_variables.php';
- header("location:main.php");
+ header("location:../main.php");
  $conexion->close();
 }else{
 //si no encuentra nada cierra conexión, destruye variables y sesiones y regresa a la pagina principal mosando mensaje de error
  $conexion->close();
  unset($_SESSION);
  session_destroy();
- header("location:index.php?mensaje=1");
+ header("location:../index.php?mensaje=1");
  exit();
 }
 }
