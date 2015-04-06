@@ -13,8 +13,6 @@ $msg = "<div class='callout callout-danger'>
 <p> Codigo de error:&nbsp;<b> ".$error."</b></p>
 </div>";
 }else{
-
-
 function encriptar(){
   //encriptamos la clave usando sha, despues una palabra que no este en diccionario, y por ultimo guadamos todo en md5
    $cve = sha1($_POST['clave']);
@@ -28,8 +26,7 @@ $usr = $_POST['usuario'];
 //consultamos que el usuario este en la base de datos
 $ConsultarUsuario = "SELECT count(*) FROM usuarios WHERE usuario = '$usr' AND clave = '$clave'";
 $Resultado = $conexion->query($ConsultarUsuario);
-echo $ConsultarUsuario;
-    $row = $Resultado->fetch_array();
+$row = $Resultado->fetch_array();
 //si encuentra un usuario registramos las variables de sesion y abrimos el FrontEnd
 
 if($row[0]){
